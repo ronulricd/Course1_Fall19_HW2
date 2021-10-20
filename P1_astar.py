@@ -180,8 +180,8 @@ class DetOccupancyGrid2D(object):
     def plot(self, fig_num=0):
         """Plots the space and its obstacles"""
         fig = plt.figure(fig_num)
+        ax = fig.add_subplot(111, aspect='equal')
         for obs in self.obstacles:
-            ax = fig.add_subplot(111, aspect='equal')
             ax.add_patch(
             patches.Rectangle(
             obs[0],
